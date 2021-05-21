@@ -40,7 +40,7 @@ export class DownQuark implements Particle {
   spin = '1/2';
 }
 
-export class Charm implements Particle {
+export class CharmQuark implements Particle {
   name = 'charm quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
@@ -60,7 +60,7 @@ export class Charm implements Particle {
   spin = '1/2';
 }
 
-export class Strange implements Particle {
+export class StrangeQuark implements Particle {
   name = 'strange quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
@@ -80,7 +80,7 @@ export class Strange implements Particle {
   spin = '1/2';
 }
 
-export class Top implements Particle {
+export class TopQuark implements Particle {
   name = 'top quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
@@ -100,7 +100,7 @@ export class Top implements Particle {
   spin = '1/2';
 }
 
-export class Bottom implements Particle {
+export class BottomQuark implements Particle {
   name = 'bottom quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;

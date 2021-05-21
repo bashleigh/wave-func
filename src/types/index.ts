@@ -47,3 +47,14 @@ export enum StateType {
   'positive',
   'negative',
 }
+
+export enum HardonCategory {
+  MESON = 'meson',
+  BARYON = 'baryon',
+}
+
+export interface Hardon {
+  name: string;
+  particles: Particle[];
+  category: HardonCategory;
+}
