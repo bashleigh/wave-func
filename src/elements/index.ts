@@ -117,7 +117,7 @@ export interface ElementInterface {
   hardons: AbstractHardon[];
   electrons: number[];
   name: ElementName;
-  symbol: string;
+  atomicSymbol: string;
   meltingPoint?: number;
   bolingPoint?: number;
   group: ElementaryGroup;
@@ -125,7 +125,7 @@ export interface ElementInterface {
 }
 export abstract class AbstractElement implements ElementInterface {
   abstract electrons: number[];
-  abstract symbol: string;
+  abstract atomicSymbol: string;
   abstract name: ElementName;
   abstract hardons: AbstractHardon[];
   abstract group: ElementaryGroup;
@@ -142,12 +142,17 @@ export abstract class AbstractElement implements ElementInterface {
   get charge(): ParticleCharge {
     return numberToParticleCharge(this.hardons.reduce((charge, hardon) => hardon.charge + charge, 0))
   }
+
+  get symbol(): string {
+    const protonCount = this.hardons.filter(hardon => hardon instanceof Proton).length;
+    return protonCount === this.number ? this.atomicSymbol : `${toSub(protonCount)}${this.atomicSymbol}`;
+  }
 }
 
 export class Hydrogen extends AbstractElement {
   name = ElementName.HYDROGEN;
   number = 1;
-  symbol = 'H';
+  atomicSymbol = 'H';
   hardons = [
     new Proton(),
   ];
@@ -160,7 +165,7 @@ export class Hydrogen extends AbstractElement {
 export class Helium extends AbstractElement {
   name = ElementName.HELIUM;
   number = 2;
-  symbol = 'He';
+  atomicSymbol = 'He';
   hardons = [
     ...new Array(2).fill(new Proton()),
     ...new Array(2).fill(new Neutron()),
@@ -174,7 +179,7 @@ export class Helium extends AbstractElement {
 export class Lithium extends AbstractElement {
   name = ElementName.LITHIUM;
   number = 3;
-  symbol = 'Li';
+  atomicSymbol = 'Li';
   hardons = [
     ...new Array(3).fill(new Proton()),
     ...new Array(3).fill(new Neutron()),
@@ -188,7 +193,7 @@ export class Lithium extends AbstractElement {
 export class Beryllium extends AbstractElement {
   name = ElementName.BERYLLIUM;
   number = 4;
-  symbol = 'Be';
+  atomicSymbol = 'Be';
   hardons = [
     ...new Array(4).fill(new Proton()),
     ...new Array(4).fill(new Neutron()),
@@ -202,7 +207,7 @@ export class Beryllium extends AbstractElement {
 export class Boron extends AbstractElement {
   name = ElementName.BORON;
   number = 5;
-  symbol = 'B';
+  atomicSymbol = 'B';
   hardons = [
     ...new Array(5).fill(new Proton()),
     ...new Array(5).fill(new Neutron()),
@@ -216,7 +221,7 @@ export class Boron extends AbstractElement {
 export class Carbon extends AbstractElement {
   name = ElementName.CARBON;
   number = 6;
-  symbol = 'C';
+  atomicSymbol = 'C';
   hardons = [
     ...new Array(6).fill(new Proton()),
     ...new Array(6).fill(new Neutron()),
@@ -228,7 +233,7 @@ export class Carbon extends AbstractElement {
 export class Nitrogen extends AbstractElement {
   name = ElementName.NITROGEN;
   number = 7;
-  symbol = 'N';
+  atomicSymbol = 'N';
   hardons = [
     ...new Array(7).fill(new Proton()),
     ...new Array(7).fill(new Neutron()),
@@ -242,7 +247,7 @@ export class Nitrogen extends AbstractElement {
 export class Oxygen extends AbstractElement {
   name = ElementName.OXYGEN;
   number = 8;
-  symbol = 'O';
+  atomicSymbol = 'O';
   hardons = [
     ...new Array(8).fill(new Proton()),
     ...new Array(8).fill(new Neutron()),
@@ -256,7 +261,7 @@ export class Oxygen extends AbstractElement {
 export class Fluorine extends AbstractElement {
   name = ElementName.FLUORINE;
   number = 9;
-  symbol = 'F';
+  atomicSymbol = 'F';
   hardons = [
     ...new Array(9).fill(new Proton()),
     ...new Array(9).fill(new Neutron()),
@@ -270,7 +275,7 @@ export class Fluorine extends AbstractElement {
 export class Neon extends AbstractElement {
   name = ElementName.NEON;
   number = 10;
-  symbol = 'Ne';
+  atomicSymbol = 'Ne';
   hardons = [
     ...new Array(10).fill(new Proton()),
     ...new Array(10).fill(new Neutron()),
@@ -284,7 +289,7 @@ export class Neon extends AbstractElement {
 export class Sodium extends AbstractElement {
   name = ElementName.SODIUM;
   number = 11;
-  symbol = 'Na';
+  atomicSymbol = 'Na';
   hardons = [
     ...new Array(11).fill(new Proton()),
     ...new Array(11).fill(new Neutron()),
@@ -298,7 +303,7 @@ export class Sodium extends AbstractElement {
 export class Magnesium extends AbstractElement {
   name = ElementName.MAGNESIUM;
   number = 12;
-  symbol = 'Mg';
+  atomicSymbol = 'Mg';
   hardons = [
     ...new Array(12).fill(new Proton()),
     ...new Array(12).fill(new Neutron()),
@@ -312,7 +317,7 @@ export class Magnesium extends AbstractElement {
 export class Aluminium extends AbstractElement {
   name = ElementName.ALUMINIUM;
   number = 13;
-  symbol = 'Al';
+  atomicSymbol = 'Al';
   hardons = [
     ...new Array(13).fill(new Proton()),
     ...new Array(13).fill(new Neutron()),
@@ -326,7 +331,7 @@ export class Aluminium extends AbstractElement {
 export class Silicon extends AbstractElement {
   name = ElementName.SILICON;
   number = 14;
-  symbol = 'Si';
+  atomicSymbol = 'Si';
   hardons = [
     ...new Array(14).fill(new Proton()),
     ...new Array(14).fill(new Neutron()),
@@ -340,7 +345,7 @@ export class Silicon extends AbstractElement {
 export class Phosphorus extends AbstractElement {
   name = ElementName.PHOSPHORUS;
   number = 15;
-  symbol = 'P';
+  atomicSymbol = 'P';
   hardons = [
     ...new Array(15).fill(new Proton()),
     ...new Array(15).fill(new Neutron()),
@@ -354,7 +359,7 @@ export class Phosphorus extends AbstractElement {
 export class Sulfur extends AbstractElement {
   name = ElementName.SULFUR;
   number = 16;
-  symbol = 'S';
+  atomicSymbol = 'S';
   hardons = [
     ...new Array(16).fill(new Proton()),
     ...new Array(16).fill(new Neutron()),
@@ -368,7 +373,7 @@ export class Sulfur extends AbstractElement {
 export class Chlorine extends AbstractElement {
   name = ElementName.CHLORINE;
   number = 17;
-  symbol = 'Cl';
+  atomicSymbol = 'Cl';
   hardons = [
     ...new Array(17).fill(new Proton()),
     ...new Array(17).fill(new Neutron()),
@@ -382,7 +387,7 @@ export class Chlorine extends AbstractElement {
 export class Argon extends AbstractElement {
   name = ElementName.ARGON;
   number = 18;
-  symbol = 'Ar';
+  atomicSymbol = 'Ar';
   hardons = [
     ...new Array(18).fill(new Proton()),
     ...new Array(18).fill(new Neutron()),
@@ -396,7 +401,7 @@ export class Argon extends AbstractElement {
 export class Potassium extends AbstractElement {
   name = ElementName.POTASSIUM;
   number = 19;
-  symbol = 'K';
+  atomicSymbol = 'K';
   hardons = [
     ...new Array(19).fill(new Proton()),
     ...new Array(19).fill(new Neutron()),
@@ -410,7 +415,7 @@ export class Potassium extends AbstractElement {
 export class Calcium extends AbstractElement {
   name = ElementName.CALCIUM;
   number = 20;
-  symbol = 'Ca';
+  atomicSymbol = 'Ca';
   hardons = [
     ...new Array(20).fill(new Proton()),
     ...new Array(20).fill(new Neutron()),
@@ -424,7 +429,7 @@ export class Calcium extends AbstractElement {
 export class Scandium extends AbstractElement {
   name = ElementName.SCANDIUM;
   number = 21;
-  symbol = 'Sc';
+  atomicSymbol = 'Sc';
   hardons = [
     ...new Array(21).fill(new Proton()),
     ...new Array(21).fill(new Neutron()),
@@ -439,7 +444,7 @@ export class Scandium extends AbstractElement {
 export class Titanium extends AbstractElement {
   name = ElementName.TITANIUM;
   number = 22;
-  symbol = 'Ti';
+  atomicSymbol = 'Ti';
   hardons = [
     ...new Array(22).fill(new Proton()),
     ...new Array(22).fill(new Neutron()),
@@ -453,7 +458,7 @@ export class Titanium extends AbstractElement {
 export class Vandaium extends AbstractElement {
   name = ElementName.VANADIUM;
   number = 23;
-  symbol = 'V';
+  atomicSymbol = 'V';
   hardons = [
     ...new Array(23).fill(new Proton()),
     ...new Array(23).fill(new Neutron()),
@@ -467,7 +472,7 @@ export class Vandaium extends AbstractElement {
 export class Chromium extends AbstractElement {
   name = ElementName.CHROMIUM;
   number = 24;
-  symbol = 'Cr';
+  atomicSymbol = 'Cr';
   hardons = [
     ...new Array(24).fill(new Proton()),
     ...new Array(24).fill(new Neutron()),
@@ -481,7 +486,7 @@ export class Chromium extends AbstractElement {
 export class Managnese extends AbstractElement {
   name = ElementName.MANGANESE;
   number = 25;
-  symbol = 'Mn';
+  atomicSymbol = 'Mn';
   hardons = [
     ...new Array(25).fill(new Proton()),
     ...new Array(25).fill(new Neutron()),
@@ -495,7 +500,7 @@ export class Managnese extends AbstractElement {
 export class Iron extends AbstractElement {
   name = ElementName.IRON;
   number = 26;
-  symbol = 'Fe';
+  atomicSymbol = 'Fe';
   hardons = [
     ...new Array(26).fill(new Proton()),
     ...new Array(26).fill(new Neutron()),
@@ -509,7 +514,7 @@ export class Iron extends AbstractElement {
 export class Colbolt extends AbstractElement {
   name = ElementName.COLBOLT;
   number = 27;
-  symbol = 'Co';
+  atomicSymbol = 'Co';
   hardons = [
     ...new Array(27).fill(new Proton()),
     ...new Array(27).fill(new Neutron()),
