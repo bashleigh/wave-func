@@ -8,7 +8,7 @@ export class Photon implements Particle {
   };
   scalar = false;
   appliedForces = [
-    ForceType.ELECTROMAGNETIC,
+    ForceType.ELECTROMAGNETISM,
   ];
   antiMatter = false;
   theoretical = false;
