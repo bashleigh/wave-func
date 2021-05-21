@@ -19,25 +19,6 @@ export class Electron implements Particle {
   spin = '1/2';
 }
 
-export class Positron implements Particle {
-  name: 'positron';
-  type = ParticleType.LEPTON;
-  group = ParticleGroup.FERMION;
-  charge = {
-    value: 1,
-    state: StateType.positive,
-  };
-  scalar = false;
-  appliedForces = [
-    ForceType.ELECTROMAGNETIC,
-  ];
-  antiMatter = true;
-  mass = .511;
-  theoretical = false;
-  symbol = 'e+';
-  spin = '1/2';
-}
-
 export class ElectronNeutrino implements Particle {
   name: 'electron neutrino';
   type = ParticleType.LEPTON;
