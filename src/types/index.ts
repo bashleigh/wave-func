@@ -12,11 +12,7 @@ export enum ForceType {
   WEAK_FORCE = 'weak force',
   ELECTROMAGNETIC = 'electromagnetic',
   STRONG_FORCE = 'strong force',
-}
-
-export enum ChargeType {
-  ELECTROMAGNETIC = 'electromagnetic',
-  COLOUR = 'colour',
+  CHROMODYNAMIC = 'chromodynamic',
 }
 
 export enum Spin {

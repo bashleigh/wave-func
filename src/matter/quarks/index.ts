@@ -12,6 +12,7 @@ export class UpQuark implements Particle {
   appliedForces = [
     ForceType.STRONG_FORCE,
     ForceType.WEAK_FORCE,
+    ForceType.CHROMODYNAMIC,
   ];
   antiMatter = false;
   theoretical = false;
@@ -32,6 +33,7 @@ export class DownQuark implements Particle {
   appliedForces = [
     ForceType.STRONG_FORCE,
     ForceType.WEAK_FORCE,
+    ForceType.CHROMODYNAMIC,
   ];
   antiMatter = false;
   theoretical = false;
@@ -52,6 +54,7 @@ export class CharmQuark implements Particle {
   appliedForces = [
     ForceType.STRONG_FORCE,
     ForceType.WEAK_FORCE,
+    ForceType.CHROMODYNAMIC,
   ];
   antiMatter = false;
   theoretical = false;
@@ -72,6 +75,7 @@ export class StrangeQuark implements Particle {
   appliedForces = [
     ForceType.STRONG_FORCE,
     ForceType.WEAK_FORCE,
+    ForceType.CHROMODYNAMIC,
   ];
   antiMatter = false;
   theoretical = false;
@@ -92,6 +96,7 @@ export class TopQuark implements Particle {
   appliedForces = [
     ForceType.STRONG_FORCE,
     ForceType.WEAK_FORCE,
+    ForceType.CHROMODYNAMIC,
   ];
   antiMatter = false;
   theoretical = false;
@@ -112,6 +117,7 @@ export class BottomQuark implements Particle {
   appliedForces = [
     ForceType.STRONG_FORCE,
     ForceType.WEAK_FORCE,
+    ForceType.CHROMODYNAMIC,
   ];
   antiMatter = false;
   theoretical = false;
