@@ -27,8 +27,7 @@ export class Gluon implements Particle {
   };
   scalar = false;
   appliedForces = [
-    ForceType.STRONG_FORCE,
-    ForceType.WEAK_FORCE,
+    ForceType.CHROMODYNAMIC,
   ];
   antiMatter = false;
   theoretical = false;
