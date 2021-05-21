@@ -39,7 +39,7 @@ console.log(oxygen.symbol, oxygen.hardons, oxygen.electrons, oxygen.meltingPoint
 # Idea
 
 ```ts
-import { Oxygen, Neutron } from 'blocks';
+import { Oxygen, Neutron, Proton } from 'blocks';
 
 const element = new Oxygen();
 
