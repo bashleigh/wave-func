@@ -1,4 +1,5 @@
 import { Neutron, Proton } from "../hardons";
+import { toSub } from "../helpers";
 import { AbstractHardon, numberToParticleCharge, ParticleCharge } from "../types";
 
 export enum ElementName {

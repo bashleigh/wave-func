@@ -11,10 +11,19 @@ A TypeScript based relation to the fundimental building blocks of our reality.
 
 ## Bosons
 
+```ts
+import { Photon, UpQuark } from 'blocks';
+
+const photon = new Photo();
+
+const up = new UpQuark();
+
+const bosons = getBosons(up); // [Gluon, PositiveWBoson, NegativeWBoson, ZBoson]
+```
+
 ## Forces 
 
 Electromagnetic
-Chromodynamic
 Weak force
 Strong force
 
