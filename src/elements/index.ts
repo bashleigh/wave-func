@@ -104,6 +104,13 @@ export enum ElementaryGroup {
   PNICTOGENS_GROUP = 'pinctogens group',
   CHALCOGENS_GROUP = 'chalcogens group',
   HALOGEN = 'halogen group',
+  GROUP3 = 'group 3',
+  GROUP4 = 'group 4',
+  GROUP5 = 'group 5',
+  GROUP6 = 'group 6',
+  GROUP7 = 'group 7',
+  GROUP8 = 'group 8',
+  GROUP9 = 'group 9',
 }
 
 export interface Element {
@@ -135,10 +142,8 @@ export class Helium implements Element {
   number = 2;
   symbol = 'He';
   hardons = [
-    new Proton(),
-    new Proton(),
-    new Neutron(),
-    new Neutron(),
+    ...new Array(2).fill(new Proton()),
+    ...new Array(2).fill(new Neutron()),
   ];
   electrons = [2];
   group = ElementaryGroup.NOBLE_GAS;
@@ -151,12 +156,8 @@ export class Lithium implements Element {
   number = 3;
   symbol = 'Li';
   hardons = [
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
+    ...new Array(3).fill(new Proton()),
+    ...new Array(3).fill(new Neutron()),
   ];
   electrons = [2, 1];
   group = ElementaryGroup.ALKALIN_METAL;
@@ -169,14 +170,8 @@ export class Beryllium implements Element {
   number = 4;
   symbol = 'Be';
   hardons = [
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
+    ...new Array(4).fill(new Proton()),
+    ...new Array(4).fill(new Neutron()),
   ];
   electrons = [2, 2];
   group = ElementaryGroup.ALKALIN_METAL;
@@ -189,16 +184,8 @@ export class Boron implements Element {
   number = 5;
   symbol = 'B';
   hardons = [
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
+    ...new Array(5).fill(new Proton()),
+    ...new Array(5).fill(new Neutron()),
   ];
   electrons = [2, 3];
   group = ElementaryGroup.BORON_GROUP;
@@ -211,18 +198,8 @@ export class Carbon implements Element {
   number = 6;
   symbol = 'C';
   hardons = [
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
+    ...new Array(6).fill(new Proton()),
+    ...new Array(6).fill(new Neutron()),
   ];
   electrons = [2, 4];
   group = ElementaryGroup.CARBON_GROUP;
@@ -233,20 +210,8 @@ export class Nitrogen implements Element {
   number = 7;
   symbol = 'N';
   hardons = [
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),    
-    new Proton(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),    
-    new Neutron(),
+    ...new Array(7).fill(new Proton()),
+    ...new Array(7).fill(new Neutron()),
   ];
   electrons = [2, 5];
   group = ElementaryGroup.PNICTOGENS_GROUP;
@@ -259,22 +224,8 @@ export class Oxygen implements Element {
   number = 8;
   symbol = 'O';
   hardons = [
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),    
-    new Proton(),
-    new Proton(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),    
-    new Neutron(),
-    new Neutron(),
+    ...new Array(8).fill(new Proton()),
+    ...new Array(8).fill(new Neutron()),
   ];
   electrons = [2, 6];
   group = ElementaryGroup.CHALCOGENS_GROUP;
@@ -287,24 +238,8 @@ export class Fluorine implements Element {
   number = 9;
   symbol = 'F';
   hardons = [
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),    
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),    
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
+    ...new Array(9).fill(new Proton()),
+    ...new Array(9).fill(new Neutron()),
   ];
   electrons = [2, 7];
   group = ElementaryGroup.HALOGEN;
@@ -317,26 +252,8 @@ export class Neon implements Element {
   number = 10;
   symbol = 'Ne';
   hardons = [
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),    
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),    
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
+    ...new Array(10).fill(new Proton()),
+    ...new Array(10).fill(new Neutron()),
   ];
   electrons = [2, 8];
   group = ElementaryGroup.NOBLE_GAS;
@@ -349,28 +266,8 @@ export class Sodium implements Element {
   number = 11;
   symbol = 'Na';
   hardons = [
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),    
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),    
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
+    ...new Array(11).fill(new Proton()),
+    ...new Array(11).fill(new Neutron()),
   ];
   electrons = [2, 8, 1];
   group = ElementaryGroup.ALKALIN_METAL;
@@ -383,30 +280,8 @@ export class Magnesium implements Element {
   number = 12;
   symbol = 'Mg';
   hardons = [
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),    
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),    
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
+    ...new Array(12).fill(new Proton()),
+    ...new Array(12).fill(new Neutron()),
   ];
   electrons = [2, 8, 2];
   group = ElementaryGroup.ALKALIN_METAL;
@@ -419,32 +294,8 @@ export class Aluminium implements Element {
   number = 13;
   symbol = 'Al';
   hardons = [
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),    
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),    
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
+    ...new Array(13).fill(new Proton()),
+    ...new Array(13).fill(new Neutron()),
   ];
   electrons = [2, 8, 3];
   group = ElementaryGroup.BORON_GROUP;
@@ -452,43 +303,199 @@ export class Aluminium implements Element {
   bolingPoint = 2743;
 }
 
-
 export class Silicon implements Element {
   name = ElementName.SILICON;
   number = 14;
   symbol = 'Si';
   hardons = [
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),    
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Proton(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),    
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
-    new Neutron(),
+    ...new Array(14).fill(new Proton()),
+    ...new Array(14).fill(new Neutron()),
   ];
   electrons = [2, 8, 4];
   group = ElementaryGroup.CARBON_GROUP;
   meltingPoint = 1687;
   bolingPoint = 3538;
+}
+
+export class Phosphorus implements Element {
+  name = ElementName.PHOSPHORUS;
+  number = 15;
+  symbol = 'P';
+  hardons = [
+    ...new Array(15).fill(new Proton()),
+    ...new Array(15).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 5];
+  group = ElementaryGroup.PNICTOGENS_GROUP;
+  meltingPoint = 317.3;
+  bolingPoint = 553.7;
+}
+
+export class Sulfur implements Element {
+  name = ElementName.SULFUR;
+  number = 16;
+  symbol = 'S';
+  hardons = [
+    ...new Array(16).fill(new Proton()),
+    ...new Array(16).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 6];
+  group = ElementaryGroup.CHALCOGENS_GROUP;
+  meltingPoint = 388.36;
+  bolingPoint = 717.8;
+}
+
+export class Chlorine implements Element {
+  name = ElementName.CHLORINE;
+  number = 17;
+  symbol = 'Cl';
+  hardons = [
+    ...new Array(17).fill(new Proton()),
+    ...new Array(17).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 7];
+  group = ElementaryGroup.HALOGEN;
+  meltingPoint = 171.6;
+  bolingPoint = 239.11;
+}
+
+export class Argon implements Element {
+  name = ElementName.ARGON;
+  number = 18;
+  symbol = 'Ar';
+  hardons = [
+    ...new Array(18).fill(new Proton()),
+    ...new Array(18).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 8];
+  group = ElementaryGroup.NOBLE_GAS;
+  meltingPoint = 83.81;
+  bolingPoint = 87.302;
+}
+
+export class Potassium implements Element {
+  name = ElementName.POTASSIUM;
+  number = 19;
+  symbol = 'K';
+  hardons = [
+    ...new Array(19).fill(new Proton()),
+    ...new Array(19).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 8, 1];
+  group = ElementaryGroup.ALKALIN_METAL;
+  meltingPoint = 336.7;
+  bolingPoint = 1032;
+}
+
+export class Calcium implements Element {
+  name = ElementName.CALCIUM;
+  number = 20;
+  symbol = 'Ca';
+  hardons = [
+    ...new Array(20).fill(new Proton()),
+    ...new Array(20).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 8, 2];
+  group = ElementaryGroup.ALKALIN_METAL;
+  meltingPoint = 1115;
+  bolingPoint = 1757;
+}
+
+export class Scandium implements Element {
+  name = ElementName.SCANDIUM;
+  number = 21;
+  symbol = 'Sc';
+  hardons = [
+    ...new Array(21).fill(new Proton()),
+    ...new Array(21).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 9, 2];
+  group = ElementaryGroup.GROUP3;
+  meltingPoint = 1814;
+  bolingPoint = 3109;
+}
+
+
+export class Titanium implements Element {
+  name = ElementName.TITANIUM;
+  number = 22;
+  symbol = 'Ti';
+  hardons = [
+    ...new Array(22).fill(new Proton()),
+    ...new Array(22).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 10, 2];
+  group = ElementaryGroup.GROUP4;
+  meltingPoint = 1941;
+  bolingPoint = 3560;
+}
+
+export class Vandaium implements Element {
+  name = ElementName.VANADIUM;
+  number = 23;
+  symbol = 'V';
+  hardons = [
+    ...new Array(23).fill(new Proton()),
+    ...new Array(23).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 11, 2];
+  group = ElementaryGroup.GROUP5;
+  meltingPoint = 2183;
+  bolingPoint = 3680;
+}
+
+export class Chromium implements Element {
+  name = ElementName.CHROMIUM;
+  number = 24;
+  symbol = 'Cr';
+  hardons = [
+    ...new Array(24).fill(new Proton()),
+    ...new Array(24).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 13, 1];
+  group = ElementaryGroup.GROUP6;
+  meltingPoint = 2180;
+  bolingPoint = 2944;
+}
+
+export class Managnese implements Element {
+  name = ElementName.MANGANESE;
+  number = 25;
+  symbol = 'Mn';
+  hardons = [
+    ...new Array(25).fill(new Proton()),
+    ...new Array(25).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 13, 2];
+  group = ElementaryGroup.GROUP7;
+  meltingPoint = 1519;
+  bolingPoint = 2334;
+}
+
+export class Iron implements Element {
+  name = ElementName.IRON;
+  number = 26;
+  symbol = 'Fe';
+  hardons = [
+    ...new Array(26).fill(new Proton()),
+    ...new Array(26).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 14, 2];
+  group = ElementaryGroup.GROUP8;
+  meltingPoint = 1811;
+  bolingPoint = 3134;
+}
+
+export class Colbolt implements Element {
+  name = ElementName.COLBOLT;
+  number = 27;
+  symbol = 'Co';
+  hardons = [
+    ...new Array(27).fill(new Proton()),
+    ...new Array(27).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 15, 2];
+  group = ElementaryGroup.GROUP9;
+  meltingPoint = 1768;
+  bolingPoint = 3200;
 }
