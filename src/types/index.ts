@@ -22,14 +22,24 @@ export enum Spin {
   ONE_THIRD = '1/3',
 }
 
+export enum ParticleCharge {
+  'whole' = 1,
+  'none' = 0,
+  '1/3' = 0.3333333,
+  '2/3' = 0.6666666,
+  '1/2' = .5,
+}
+
+export const numberToParticleCharge = (num: number): ParticleCharge => num === 1 ? ParticleCharge.whole : num === 0.3333333 ? ParticleCharge["1/3"] : num === 0.6666666 ? ParticleCharge["2/3"] : num === .5 ? ParticleCharge["1/2"] : ParticleCharge.none;
+
 export interface Particle {
   name: string;
   group: ParticleGroup;
   type?: ParticleType;
   appliedForces: ForceType[];
   charge: {
-    value: number | string,
-    state: StateType,
+    value: ParticleCharge,
+    state?: StateType,
   };
   scalar: boolean;
   antiMatter: boolean;
@@ -49,8 +59,22 @@ export enum HardonCategory {
   BARYON = 'baryon',
 }
 
-export interface Hardon {
+export interface HardonInterface {
   name: string;
   particles: Particle[];
   category: HardonCategory;
+}
+
+export abstract class AbstractHardon implements HardonInterface {
+  abstract name: string;
+  abstract particles: Particle[];
+  abstract category: HardonCategory; // Determined by particles in hardon?
+
+  get charge(): ParticleCharge {
+    return numberToParticleCharge(this.particles.reduce((current, particle) => {
+      const particleCharge: number = particle.charge.state === StateType.positive ? 0 + particle.charge.value : 0 - particle.charge.value;
+
+      return current + particleCharge;
+    }, 0))
+  }
 }

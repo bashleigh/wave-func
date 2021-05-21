@@ -1,5 +1,5 @@
 import { Neutron, Proton } from "../hardons";
-import { Hardon } from "../types";
+import { AbstractHardon, numberToParticleCharge, ParticleCharge } from "../types";
 
 export enum ElementName {
   HYDROGEN = 'hydrogen',
@@ -113,8 +113,8 @@ export enum ElementaryGroup {
   GROUP9 = 'group 9',
 }
 
-export interface Element {
-  hardons: Hardon[];
+export interface ElementInterface {
+  hardons: AbstractHardon[];
   electrons: number[];
   name: ElementName;
   symbol: string;
@@ -123,8 +123,28 @@ export interface Element {
   group: ElementaryGroup;
   number: number;
 }
+export abstract class AbstractElement implements ElementInterface {
+  abstract electrons: number[];
+  abstract symbol: string;
+  abstract name: ElementName;
+  abstract hardons: AbstractHardon[];
+  abstract group: ElementaryGroup;
+  abstract number: number;
 
-export class Hydrogen implements Element {
+  get electronShells(): number {
+    return this.electrons.length
+  }
+
+  get overallChargeStatus(): 'positive' | 'negative' {
+    return this.charge < 0 ? 'negative' : 'positive';
+  }
+
+  get charge(): ParticleCharge {
+    return numberToParticleCharge(this.hardons.reduce((charge, hardon) => hardon.charge + charge, 0))
+  }
+}
+
+export class Hydrogen extends AbstractElement {
   name = ElementName.HYDROGEN;
   number = 1;
   symbol = 'H';
@@ -137,7 +157,7 @@ export class Hydrogen implements Element {
   bolingPoint = 20.271;
 }
 
-export class Helium implements Element {
+export class Helium extends AbstractElement {
   name = ElementName.HELIUM;
   number = 2;
   symbol = 'He';
@@ -151,7 +171,7 @@ export class Helium implements Element {
   bolingPoint = 4.222;
 }
 
-export class Lithium implements Element {
+export class Lithium extends AbstractElement {
   name = ElementName.LITHIUM;
   number = 3;
   symbol = 'Li';
@@ -165,7 +185,7 @@ export class Lithium implements Element {
   bolingPoint = 1603;
 }
 
-export class Beryllium implements Element {
+export class Beryllium extends AbstractElement {
   name = ElementName.BERYLLIUM;
   number = 4;
   symbol = 'Be';
@@ -179,7 +199,7 @@ export class Beryllium implements Element {
   bolingPoint = 2742;
 }
 
-export class Boron implements Element {
+export class Boron extends AbstractElement {
   name = ElementName.BORON;
   number = 5;
   symbol = 'B';
@@ -193,7 +213,7 @@ export class Boron implements Element {
   bolingPoint = 4200;
 }
 
-export class Carbon implements Element {
+export class Carbon extends AbstractElement {
   name = ElementName.CARBON;
   number = 6;
   symbol = 'C';
@@ -205,7 +225,7 @@ export class Carbon implements Element {
   group = ElementaryGroup.CARBON_GROUP;
 }
 
-export class Nitrogen implements Element {
+export class Nitrogen extends AbstractElement {
   name = ElementName.NITROGEN;
   number = 7;
   symbol = 'N';
@@ -219,7 +239,7 @@ export class Nitrogen implements Element {
   meltingPoint = 63.23;
 }
 
-export class Oxygen implements Element {
+export class Oxygen extends AbstractElement {
   name = ElementName.OXYGEN;
   number = 8;
   symbol = 'O';
@@ -233,7 +253,7 @@ export class Oxygen implements Element {
   bolingPoint = 90.188;
 }
 
-export class Fluorine implements Element {
+export class Fluorine extends AbstractElement {
   name = ElementName.FLUORINE;
   number = 9;
   symbol = 'F';
@@ -247,7 +267,7 @@ export class Fluorine implements Element {
   bolingPoint = 85.03;
 }
 
-export class Neon implements Element {
+export class Neon extends AbstractElement {
   name = ElementName.NEON;
   number = 10;
   symbol = 'Ne';
@@ -261,7 +281,7 @@ export class Neon implements Element {
   bolingPoint = 27.104;
 }
 
-export class Sodium implements Element {
+export class Sodium extends AbstractElement {
   name = ElementName.SODIUM;
   number = 11;
   symbol = 'Na';
@@ -275,7 +295,7 @@ export class Sodium implements Element {
   bolingPoint = 1156.09;
 }
 
-export class Magnesium implements Element {
+export class Magnesium extends AbstractElement {
   name = ElementName.MAGNESIUM;
   number = 12;
   symbol = 'Mg';
@@ -289,7 +309,7 @@ export class Magnesium implements Element {
   bolingPoint = 1363;
 }
 
-export class Aluminium implements Element {
+export class Aluminium extends AbstractElement {
   name = ElementName.ALUMINIUM;
   number = 13;
   symbol = 'Al';
@@ -303,7 +323,7 @@ export class Aluminium implements Element {
   bolingPoint = 2743;
 }
 
-export class Silicon implements Element {
+export class Silicon extends AbstractElement {
   name = ElementName.SILICON;
   number = 14;
   symbol = 'Si';
@@ -317,7 +337,7 @@ export class Silicon implements Element {
   bolingPoint = 3538;
 }
 
-export class Phosphorus implements Element {
+export class Phosphorus extends AbstractElement {
   name = ElementName.PHOSPHORUS;
   number = 15;
   symbol = 'P';
@@ -331,7 +351,7 @@ export class Phosphorus implements Element {
   bolingPoint = 553.7;
 }
 
-export class Sulfur implements Element {
+export class Sulfur extends AbstractElement {
   name = ElementName.SULFUR;
   number = 16;
   symbol = 'S';
@@ -345,7 +365,7 @@ export class Sulfur implements Element {
   bolingPoint = 717.8;
 }
 
-export class Chlorine implements Element {
+export class Chlorine extends AbstractElement {
   name = ElementName.CHLORINE;
   number = 17;
   symbol = 'Cl';
@@ -359,7 +379,7 @@ export class Chlorine implements Element {
   bolingPoint = 239.11;
 }
 
-export class Argon implements Element {
+export class Argon extends AbstractElement {
   name = ElementName.ARGON;
   number = 18;
   symbol = 'Ar';
@@ -373,7 +393,7 @@ export class Argon implements Element {
   bolingPoint = 87.302;
 }
 
-export class Potassium implements Element {
+export class Potassium extends AbstractElement {
   name = ElementName.POTASSIUM;
   number = 19;
   symbol = 'K';
@@ -387,7 +407,7 @@ export class Potassium implements Element {
   bolingPoint = 1032;
 }
 
-export class Calcium implements Element {
+export class Calcium extends AbstractElement {
   name = ElementName.CALCIUM;
   number = 20;
   symbol = 'Ca';
@@ -401,7 +421,7 @@ export class Calcium implements Element {
   bolingPoint = 1757;
 }
 
-export class Scandium implements Element {
+export class Scandium extends AbstractElement {
   name = ElementName.SCANDIUM;
   number = 21;
   symbol = 'Sc';
@@ -416,7 +436,7 @@ export class Scandium implements Element {
 }
 
 
-export class Titanium implements Element {
+export class Titanium extends AbstractElement {
   name = ElementName.TITANIUM;
   number = 22;
   symbol = 'Ti';
@@ -430,7 +450,7 @@ export class Titanium implements Element {
   bolingPoint = 3560;
 }
 
-export class Vandaium implements Element {
+export class Vandaium extends AbstractElement {
   name = ElementName.VANADIUM;
   number = 23;
   symbol = 'V';
@@ -444,7 +464,7 @@ export class Vandaium implements Element {
   bolingPoint = 3680;
 }
 
-export class Chromium implements Element {
+export class Chromium extends AbstractElement {
   name = ElementName.CHROMIUM;
   number = 24;
   symbol = 'Cr';
@@ -458,7 +478,7 @@ export class Chromium implements Element {
   bolingPoint = 2944;
 }
 
-export class Managnese implements Element {
+export class Managnese extends AbstractElement {
   name = ElementName.MANGANESE;
   number = 25;
   symbol = 'Mn';
@@ -472,7 +492,7 @@ export class Managnese implements Element {
   bolingPoint = 2334;
 }
 
-export class Iron implements Element {
+export class Iron extends AbstractElement {
   name = ElementName.IRON;
   number = 26;
   symbol = 'Fe';
@@ -486,7 +506,7 @@ export class Iron implements Element {
   bolingPoint = 3134;
 }
 
-export class Colbolt implements Element {
+export class Colbolt extends AbstractElement {
   name = ElementName.COLBOLT;
   number = 27;
   symbol = 'Co';

@@ -1,11 +1,11 @@
-import { ForceType, Particle, ParticleGroup, ParticleType, StateType } from "../../types";
+import { ForceType, Particle, ParticleCharge, ParticleGroup, ParticleType, StateType } from "../../types";
 
 export class AntiUpQuark implements Particle {
   name = 'antiup quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
   charge = {
-    value: '2/3',
+    value: ParticleCharge["2/3"],
     state: StateType.negative,
   };
   scalar = false;
@@ -26,7 +26,7 @@ export class AntiDownQuark implements Particle {
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
   charge = {
-    value: '1/3',
+    value: ParticleCharge["1/3"],
     state: StateType.positive,
   };
   scalar = false;
@@ -47,7 +47,7 @@ export class AntiCharmQuark implements Particle {
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
   charge = {
-    value: '2/3',
+    value: ParticleCharge["2/3"],
     state: StateType.negative,
   };
   scalar = false;
@@ -68,7 +68,7 @@ export class AntiStrangeQuark implements Particle {
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
   charge = {
-    value: '1/3',
+    value: ParticleCharge["1/3"],
     state: StateType.positive,
   };
   scalar = false;
@@ -90,7 +90,7 @@ export class AntiTopQuark implements Particle {
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
   charge = {
-    value: '2/3',
+    value: ParticleCharge["2/3"],
     state: StateType.negative,
   };
   scalar = false;
@@ -111,7 +111,7 @@ export class AntiBottomQuark implements Particle {
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
   charge = {
-    value: '1/3',
+    value: ParticleCharge["1/3"],
     state: StateType.positive,
   };
   scalar = false;

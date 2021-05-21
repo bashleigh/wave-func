@@ -5,7 +5,6 @@ export class Photon implements Particle {
   group = ParticleGroup.GAUGE_BOSON;
   charge = {
     value: 0,
-    state: StateType.positive,
   };
   scalar = false;
   appliedForces = [
@@ -23,7 +22,6 @@ export class Gluon implements Particle {
   group = ParticleGroup.GAUGE_BOSON;
   charge = {
     value: 0,
-    state: StateType.positive,
   };
   scalar = false;
   appliedForces = [
@@ -41,7 +39,6 @@ export class ZBoson implements Particle {
   group = ParticleGroup.GAUGE_BOSON;
   charge = {
     value: 0,
-    state: StateType.positive,
   };
   scalar = false;
   appliedForces = [
@@ -98,7 +95,6 @@ export class Higgs implements Particle {
   group = ParticleGroup.GAUGE_BOSON;
   charge = {
     value: 0,
-    state: StateType.negative,
   };
   scalar = true;
   appliedForces = [];

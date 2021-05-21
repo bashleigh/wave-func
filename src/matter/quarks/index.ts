@@ -1,11 +1,11 @@
-import { ForceType, Particle, ParticleGroup, ParticleType, StateType } from "../../types";
+import { ForceType, Particle, ParticleCharge, ParticleGroup, ParticleType, StateType } from "../../types";
 
 export class UpQuark implements Particle {
   name = 'up quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
   charge = {
-    value: '2/3',
+    value: ParticleCharge["2/3"],
     state: StateType.positive,
   };
   scalar = false;
@@ -26,7 +26,7 @@ export class DownQuark implements Particle {
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
   charge = {
-    value: '1/3',
+    value: ParticleCharge["1/3"],
     state: StateType.negative,
   };
   scalar = false;
@@ -47,7 +47,7 @@ export class CharmQuark implements Particle {
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
   charge = {
-    value: '2/3',
+    value: ParticleCharge["2/3"],
     state: StateType.positive,
   };
   scalar = false;
@@ -68,7 +68,7 @@ export class StrangeQuark implements Particle {
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
   charge = {
-    value: '1/3',
+    value: ParticleCharge["1/3"],
     state: StateType.negative,
   };
   scalar = false;
@@ -89,7 +89,7 @@ export class TopQuark implements Particle {
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
   charge = {
-    value: '2/3',
+    value: ParticleCharge["2/3"],
     state: StateType.positive,
   };
   scalar = false;
@@ -110,7 +110,7 @@ export class BottomQuark implements Particle {
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
   charge = {
-    value: '1/3',
+    value: ParticleCharge["1/3"],
     state: StateType.negative,
   };
   scalar = false;

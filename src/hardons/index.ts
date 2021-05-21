@@ -1,8 +1,8 @@
 import { AntiUpQuark, AntiDownQuark } from "../antimatter";
 import { DownQuark, UpQuark } from "../matter";
-import { Hardon, HardonCategory } from "../types";
+import { AbstractHardon, HardonCategory } from "../types";
 
-export class Proton implements Hardon {
+export class Proton extends AbstractHardon {
   name = 'proton';
   particles = [
     new UpQuark(),
@@ -12,7 +12,7 @@ export class Proton implements Hardon {
   category = HardonCategory.BARYON;
 }
 
-export class Neutron implements Hardon {
+export class Neutron extends AbstractHardon {
   name = 'neutron';
   particles = [
     new UpQuark(),
@@ -22,7 +22,7 @@ export class Neutron implements Hardon {
   category = HardonCategory.BARYON;
 }
 
-export class Pion implements Hardon {
+export class Pion extends AbstractHardon {
   name = 'pion';
   category = HardonCategory.MESON;
   particles = [
@@ -31,7 +31,7 @@ export class Pion implements Hardon {
   ];
 }
 
-export class AntiProton implements Hardon {
+export class AntiProton extends AbstractHardon {
   name = 'antiproton';
   particles = [
     new AntiUpQuark(),
@@ -41,7 +41,7 @@ export class AntiProton implements Hardon {
   category = HardonCategory.BARYON;
 }
 
-export class AntiNeutron implements Hardon {
+export class AntiNeutron extends AbstractHardon {
   name = 'antineutron';
   particles = [
     new AntiUpQuark(),
