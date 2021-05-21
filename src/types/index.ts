@@ -10,9 +10,8 @@ export enum ParticleType {
 
 export enum ForceType {
   WEAK_FORCE = 'weak force',
-  ELECTROMAGNETIC = 'electromagnetic',
+  ELECTROMAGNETISM = 'electromagnetism',
   STRONG_FORCE = 'strong force',
-  CHROMODYNAMIC = 'chromodynamic',
 }
 
 export enum Spin {

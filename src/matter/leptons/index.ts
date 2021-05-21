@@ -10,7 +10,7 @@ export class Electron implements Particle {
   };
   scalar = false;
   appliedForces = [
-    ForceType.ELECTROMAGNETIC,
+    ForceType.ELECTROMAGNETISM,
   ];
   antiMatter = false;
   theoretical = false;
@@ -29,7 +29,7 @@ export class ElectronNeutrino implements Particle {
   };
   scalar = false;
   appliedForces = [
-    ForceType.ELECTROMAGNETIC,
+    ForceType.ELECTROMAGNETISM,
   ];
   antiMatter = false;
   mass = 2.2;
@@ -49,7 +49,7 @@ export class Muon implements Particle {
   };
   scalar = false;
   appliedForces = [
-    ForceType.ELECTROMAGNETIC,
+    ForceType.ELECTROMAGNETISM,
   ];
   antiMatter = false;
   mass = 105.66;
@@ -68,7 +68,7 @@ export class Tau implements Particle {
   };
   scalar = false;
   appliedForces = [
-    ForceType.ELECTROMAGNETIC,
+    ForceType.ELECTROMAGNETISM,
   ];
   antiMatter = false;
   mass = 1.7768;
@@ -87,7 +87,7 @@ export class TauNeutrino implements Particle {
   };
   scalar = false;
   appliedForces = [
-    ForceType.ELECTROMAGNETIC,
+    ForceType.ELECTROMAGNETISM,
   ];
   antiMatter = false;
   mass = 18.2;
@@ -106,7 +106,7 @@ export class MuonNeutrino implements Particle {
   };
   scalar = false;
   appliedForces = [
-    ForceType.ELECTROMAGNETIC,
+    ForceType.ELECTROMAGNETISM,
   ];
   antiMatter = false;
   mass = 0.17;

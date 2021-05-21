@@ -25,7 +25,7 @@ export class Gluon implements Particle {
   };
   scalar = false;
   appliedForces = [
-    ForceType.CHROMODYNAMIC,
+    ForceType.STRONG_FORCE,
   ];
   antiMatter = false;
   theoretical = false;
@@ -42,7 +42,6 @@ export class ZBoson implements Particle {
   };
   scalar = false;
   appliedForces = [
-    ForceType.STRONG_FORCE,
     ForceType.WEAK_FORCE,
   ];
   antiMatter = false;
@@ -61,7 +60,6 @@ export class PositiveWBoson implements Particle {
   };
   scalar = false;
   appliedForces = [
-    ForceType.STRONG_FORCE,
     ForceType.WEAK_FORCE,
   ];
   antiMatter = false;
@@ -80,7 +78,6 @@ export class NegativeWBoson implements Particle {
   };
   scalar = false;
   appliedForces = [
-    ForceType.STRONG_FORCE,
     ForceType.WEAK_FORCE,
   ];
   antiMatter = false;
