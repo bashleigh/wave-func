@@ -44,6 +44,14 @@ console.log(oxygen.symbol, oxygen.hardons, oxygen.electrons, oxygen.meltingPoint
 
 ```
 
+## Anti matter
+
+```ts
+import { Proton, Electron, oppositeMatter } from 'blocks';
+
+const antiMatter = oppositeMatter(new Proton()); // AntiProton
+const antiMatter = oppositeMatter(new Electron()); // Positron
+```
 
 # Idea
 
