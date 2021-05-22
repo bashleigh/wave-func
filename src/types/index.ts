@@ -62,12 +62,14 @@ export interface HardonInterface {
   name: string;
   particles: Particle[];
   category: HardonCategory;
+  antiMatter: boolean;
 }
 
 export abstract class AbstractHardon implements HardonInterface {
   abstract name: string;
   abstract particles: Particle[];
   abstract category: HardonCategory; // Determined by particles in hardon?
+  abstract antiMatter: boolean;
 
   get charge(): ParticleCharge {
     return numberToParticleCharge(this.particles.reduce((current, particle) => {
