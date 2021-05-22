@@ -112,6 +112,9 @@ export enum ElementaryGroup {
   GROUP7 = 'group 7',
   GROUP8 = 'group 8',
   GROUP9 = 'group 9',
+  GROUP10 = 'group 10',
+  GROUP11 = 'group 11',
+  GROUP12 = 'group 12',
 }
 
 export interface ElementInterface {
@@ -524,4 +527,342 @@ export class Colbolt extends AbstractElement {
   group = ElementaryGroup.GROUP9;
   meltingPoint = 1768;
   bolingPoint = 3200;
+}
+
+export class Nickel extends AbstractElement {
+  name = ElementName.NICKEL;
+  number = 28;
+  atomicSymbol = 'Ni';
+  hardons = [
+    ...new Array(29).fill(new Proton()),
+    ...new Array(29).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 16, 2];
+  group = ElementaryGroup.GROUP10;
+  meltingPoint = 1728;
+  bolingPoint = 3003;
+}
+
+export class Copper extends AbstractElement {
+  name = ElementName.COPPER;
+  number = 29;
+  atomicSymbol = 'Cu';
+  hardons = [
+    ...new Array(29).fill(new Proton()),
+    ...new Array(29).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 1];
+  group = ElementaryGroup.GROUP11;
+  meltingPoint = 1357.77;
+  bolingPoint = 2835;
+}
+
+export class Zinc extends AbstractElement {
+  name = ElementName.ZINC;
+  number = 30;
+  atomicSymbol = 'Zn';
+  hardons = [
+    ...new Array(30).fill(new Proton()),
+    ...new Array(30).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 2];
+  group = ElementaryGroup.GROUP12;
+  meltingPoint = 692.68;
+  bolingPoint = 1180;
+}
+
+export class Gallium extends AbstractElement {
+  name = ElementName.GALLIUM;
+  number = 31;
+  atomicSymbol = 'Ga';
+  hardons = [
+    ...new Array(31).fill(new Proton()),
+    ...new Array(31).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 3];
+  group = ElementaryGroup.BORON_GROUP;
+  meltingPoint = 302.9146;
+  bolingPoint = 2673;
+}
+
+export class Germanium extends AbstractElement {
+  name = ElementName.GERMANIUM;
+  number = 32;
+  atomicSymbol = 'Ge';
+  hardons = [
+    ...new Array(32).fill(new Proton()),
+    ...new Array(32).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 4];
+  group = ElementaryGroup.CARBON_GROUP;
+  meltingPoint = 1211.40;
+  bolingPoint = 1720.85;
+}
+
+
+export class Arsenic extends AbstractElement {
+  name = ElementName.ARSENIC;
+  number = 33;
+  atomicSymbol = 'As';
+  hardons = [
+    ...new Array(33).fill(new Proton()),
+    ...new Array(33).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 5];
+  group = ElementaryGroup.PNICTOGENS_GROUP;
+}
+
+export class Selenium extends AbstractElement {
+  name = ElementName.SELENIUM;
+  number = 34;
+  atomicSymbol = 'Se';
+  hardons = [
+    ...new Array(34).fill(new Proton()),
+    ...new Array(34).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 6];
+  group = ElementaryGroup.CHALCOGENS_GROUP;
+  meltingPoint = 494;
+  bolingPoint = 958;
+}
+
+export class Bromine extends AbstractElement {
+  name = ElementName.BORMINE;
+  number = 35;
+  atomicSymbol = 'Br';
+  hardons = [
+    ...new Array(35).fill(new Proton()),
+    ...new Array(35).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 7];
+  group = ElementaryGroup.HALOGEN;
+  meltingPoint = 265.8;
+  bolingPoint = 332;
+}
+
+export class Krypton extends AbstractElement {
+  name = ElementName.KRYPTON;
+  number = 36;
+  atomicSymbol = 'Kr';
+  hardons = [
+    ...new Array(36).fill(new Proton()),
+    ...new Array(36).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 8];
+  group = ElementaryGroup.NOBLE_GAS;
+  meltingPoint = 115.78;
+  bolingPoint = 119.93;
+}
+
+
+export class Rubidium extends AbstractElement {
+  name = ElementName.RUBIDIUM;
+  number = 37;
+  atomicSymbol = 'Rb';
+  hardons = [
+    ...new Array(37).fill(new Proton()),
+    ...new Array(37).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 8, 1];
+  group = ElementaryGroup.ALKALIN_METAL;
+  meltingPoint = 312.45;
+  bolingPoint = 961;
+}
+
+
+export class Strontium extends AbstractElement {
+  name = ElementName.STRONTIUM;
+  number = 38;
+  atomicSymbol = 'Sr';
+  hardons = [
+    ...new Array(38).fill(new Proton()),
+    ...new Array(38).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 8, 2];
+  group = ElementaryGroup.ALKALIN_METAL;
+  meltingPoint = 1050;
+  bolingPoint = 1650;
+}
+
+export class Yttrium extends AbstractElement {
+  name = ElementName.YTTRIUM;
+  number = 39;
+  atomicSymbol = 'Y';
+  hardons = [
+    ...new Array(39).fill(new Proton()),
+    ...new Array(39).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 9, 2];
+  group = ElementaryGroup.GROUP3;
+  meltingPoint = 1799;
+  bolingPoint = 3203;
+}
+
+
+export class Zirconium extends AbstractElement {
+  name = ElementName.ZIRCONIUM;
+  number = 40;
+  atomicSymbol = 'Zr';
+  hardons = [
+    ...new Array(40).fill(new Proton()),
+    ...new Array(40).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 10, 2];
+  group = ElementaryGroup.GROUP4;
+  meltingPoint = 2128;
+  bolingPoint = 4650;
+}
+
+export class Niobium extends AbstractElement {
+  name = ElementName.NIOBIUM;
+  number = 41;
+  atomicSymbol = 'Nb';
+  hardons = [
+    ...new Array(41).fill(new Proton()),
+    ...new Array(41).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 12, 1];
+  group = ElementaryGroup.GROUP5;
+  meltingPoint = 2750;
+  bolingPoint = 5017;
+}
+
+export class Molybdenum extends AbstractElement {
+  name = ElementName.MOLYBDENUM;
+  number = 42;
+  atomicSymbol = 'Mo';
+  hardons = [
+    ...new Array(42).fill(new Proton()),
+    ...new Array(42).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 13, 1];
+  group = ElementaryGroup.GROUP6;
+  meltingPoint = 2896;
+  bolingPoint = 4912;
+}
+
+export class Technetium extends AbstractElement {
+  name = ElementName.TECHNETIUM;
+  number = 43;
+  atomicSymbol = 'Tc';
+  hardons = [
+    ...new Array(43).fill(new Proton()),
+    ...new Array(43).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 13, 2];
+  group = ElementaryGroup.GROUP7;
+  meltingPoint = 2430;
+  bolingPoint = 4538;
+}
+
+export class Ruthenium extends AbstractElement {
+  name = ElementName.RUTHENIUM;
+  number = 44;
+  atomicSymbol = 'Ru';
+  hardons = [
+    ...new Array(44).fill(new Proton()),
+    ...new Array(44).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 15, 1];
+  group = ElementaryGroup.GROUP8;
+  meltingPoint = 2607;
+  bolingPoint = 4423;
+}
+
+export class Rhodium extends AbstractElement {
+  name = ElementName.RHODIUM;
+  number = 45;
+  atomicSymbol = 'Rh';
+  hardons = [
+    ...new Array(45).fill(new Proton()),
+    ...new Array(45).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 16, 2];
+  group = ElementaryGroup.GROUP9;
+  meltingPoint = 2237;
+  bolingPoint = 3968;
+}
+
+export class Palladium extends AbstractElement {
+  name = ElementName.PALLADIUM;
+  number = 46;
+  atomicSymbol = 'Pd';
+  hardons = [
+    ...new Array(46).fill(new Proton()),
+    ...new Array(46).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 18];
+  group = ElementaryGroup.GROUP10;
+  meltingPoint = 1828.05;
+  bolingPoint = 2830.82;
+}
+
+export class Silver extends AbstractElement {
+  name = ElementName.TECHNETIUM;
+  number = 47;
+  atomicSymbol = 'Ag';
+  hardons = [
+    ...new Array(47).fill(new Proton()),
+    ...new Array(47).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 18, 1];
+  group = ElementaryGroup.GROUP7;
+  meltingPoint = 1234.93;
+  bolingPoint = 2435;
+}
+
+export class Cadmium extends AbstractElement {
+  name = ElementName.CADMIUM;
+  number = 48;
+  atomicSymbol = 'Cd';
+  hardons = [
+    ...new Array(48).fill(new Proton()),
+    ...new Array(48).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 18, 2];
+  group = ElementaryGroup.GROUP12;
+  meltingPoint = 594.22;
+  bolingPoint = 1040;
+}
+
+export class Indium extends AbstractElement {
+  name = ElementName.INDIUM;
+  number = 49;
+  atomicSymbol = 'In';
+  hardons = [
+    ...new Array(49).fill(new Proton()),
+    ...new Array(49).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 18, 3];
+  group = ElementaryGroup.BORON_GROUP;
+  meltingPoint = 429.7485;
+  bolingPoint = 2345;
+}
+
+export class Tin extends AbstractElement {
+  name = ElementName.TIN;
+  number = 50;
+  atomicSymbol = 'Sn';
+  hardons = [
+    ...new Array(50).fill(new Proton()),
+    ...new Array(50).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 18, 4];
+  group = ElementaryGroup.CARBON_GROUP;
+  meltingPoint = 505.08;
+  bolingPoint = 2875;
+}
+
+export class Antimony extends AbstractElement {
+  name = ElementName.ANTIMONY;
+  number = 51;
+  atomicSymbol = 'Sb';
+  hardons = [
+    ...new Array(51).fill(new Proton()),
+    ...new Array(51).fill(new Neutron()),
+  ];
+  electrons = [2, 8, 18, 18, 5];
+  group = ElementaryGroup.PNICTOGENS_GROUP;
+  meltingPoint = 903.78;
+  bolingPoint = 1908;
 }
