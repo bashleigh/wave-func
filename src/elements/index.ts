@@ -151,6 +151,10 @@ export abstract class AbstractElement implements ElementInterface {
     const protonCount = this.hardons.filter(hardon => hardon instanceof Proton).length;
     return protonCount === this.number ? this.atomicSymbol : `${toSub(protonCount)}${this.atomicSymbol}`;
   }
+
+  get stable(): boolean {
+    return this.charge === 0;
+  }
 }
 
 export class Hydrogen extends AbstractElement {
