@@ -8,7 +8,7 @@ A TypeScript based relation to the fundimental building blocks of our reality.
 ### Quarks
 
 name | charge | spin | anti matter
---- | --- | ---
+--- | --- | --- | ---
 UpQuark | +2/3 | 1/2 | false
 DownQuark | -1/3 | 1/2 | false
 TopQuark | +2/3 | 1/2 | false
@@ -27,7 +27,7 @@ AntiCharmQuark | -2/3 | 1/2 | false
 ### Leptons
 
 name | charge | spin | anti matter
---- | --- | ---
+--- | --- | --- | ---
 Electron | -1 | 1/2 | false
 Positron | +1 | 1/2 | true
 ElectronNeutrino | 0 | 1/2 | false
