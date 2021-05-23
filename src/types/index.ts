@@ -71,8 +71,12 @@ export abstract class AbstractHardon implements HardonInterface {
   abstract category: HardonCategory; // Determined by particles in hardon?
   abstract antiMatter: boolean;
 
-  get charge(): ParticleCharge {
-    return numberToParticleCharge(this.particles.reduce((current, particle) => {
+  get chargeForHumans(): ParticleCharge {
+    return numberToParticleCharge(this.charge);
+  }
+
+  get charge(): number {
+    return Math.ceil(this.particles.reduce((current, particle) => {
       const particleCharge: number = particle.charge.state === StateType.positive ? 0 + particle.charge.value : 0 - particle.charge.value;
 
       return current + particleCharge;

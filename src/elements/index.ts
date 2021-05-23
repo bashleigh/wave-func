@@ -1,6 +1,6 @@
-import { Neutron, Proton } from "../hardons";
+import { AntiProton, Neutron, Proton } from "../hardons";
 import { toSub } from "../helpers";
-import { AbstractHardon, numberToParticleCharge, ParticleCharge } from "../types";
+import { AbstractHardon } from "../types";
 
 export enum ElementName {
   HYDROGEN = 'hydrogen',
@@ -143,8 +143,8 @@ export abstract class AbstractElement implements ElementInterface {
     return this.charge < 0 ? 'negative' : 'positive';
   }
 
-  get charge(): ParticleCharge {
-    return numberToParticleCharge(this.hardons.reduce((charge, hardon) => hardon.charge + charge, 0))
+  get charge(): number {
+    return this.hardons.reduce((charge, hardon) => hardon.charge + charge, 0) - this.electrons.reduce((sum, electron) => sum + electron);
   }
 
   get symbol(): string {
@@ -154,6 +154,13 @@ export abstract class AbstractElement implements ElementInterface {
 
   get stable(): boolean {
     return this.charge === 0;
+  }
+
+  addHardon(hardon: Proton | Neutron) {
+    this.hardons.push(hardon);
+    if (hardon instanceof Proton) {
+      // TODO calculate next atommic structure
+    }
   }
 }
 
