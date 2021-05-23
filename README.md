@@ -2,6 +2,8 @@
 
 A TypeScript based relation to the fundimental building blocks of our reality.
 
+I found it difficult to learn the different and difference between the fundimental particles. So I've built a strictly typed package of all of them and how they relate to each other. This is mainly because of the similarly named particles and the same suffix used for all the different types.
+
 
 ## Fermions
 
