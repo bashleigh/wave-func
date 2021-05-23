@@ -7,9 +7,50 @@ A TypeScript based relation to the fundimental building blocks of our reality.
 
 ### Quarks
 
+name | charge | spin | anti matter
+--- | --- | ---
+UpQuark | +2/3 | 1/2 | false
+DownQuark | -1/3 | 1/2 | false
+TopQuark | +2/3 | 1/2 | false
+BottomQuark | -1/3 | 1/2 | false
+StrangeQuark | -1/3 | 1/2 | false
+CharmQuark | +2/3 | 1/2 | false
+CharmQuark | +2/3 | 1/2 | false
+AntiUpQuark | -2/3 | 1/2 | false
+AntiDownQuark | +1/3 | 1/2 | false
+AntiTopQuark | -2/3 | 1/2 | false
+AntiBottomQuark | +1/3 | 1/2 | false
+AntiStrangeQuark | +1/3 | 1/2 | false
+AntiCharmQuark | -2/3 | 1/2 | false
+AntiCharmQuark | -2/3 | 1/2 | false
+
 ### Leptons
 
+name | charge | spin | anti matter
+--- | --- | ---
+Electron | -1 | 1/2 | false
+Positron | +1 | 1/2 | true
+ElectronNeutrino | 0 | 1/2 | false
+ElectronAntiNeutrino | 0 | 1/2 | true
+Muon | -1 | 1/2 | false
+AntiMuon | +1 | 1/2 | true
+Tau | -1 | 1/2 | false
+AntiTau | +1 | 1/2 | true
+TauNeutrino | -1 | 1/2 | false
+AntiTauNeutrino | 0 | 1/2 | true
+MuonNeutrino | 0 | 1/2 | false
+AntiMuonNeutrino | 0 | 1/2 | true
+
 ## Bosons
+
+name | Forces | Scalar
+--- | --- | ---
+Photon | Electromagnetic | false
+Gluon | Strong force | false
+ZBoson | Weak force | false
+PositiveWBoson | Weak force | false
+NegativeWBoson | Weak force | false
+Higgs Boson | | true
 
 ```ts
 import { Photon, UpQuark } from 'blocks';
@@ -25,7 +66,7 @@ const bosons = getBosons(up); // [Gluon, PositiveWBoson, NegativeWBoson, ZBoson]
 
 Electromagnetic
 Weak force
-Strong force
+Strong force (chromodynamic)
 
 ## Spin
 
@@ -42,6 +83,25 @@ const oxygen = new Oxygen();
 
 console.log(oxygen.symbol, oxygen.hardons, oxygen.electrons, oxygen.meltingPoint, oxygen.boilingPoint)
 
+```
+
+## Charge 
+
+```ts
+import { Proton, Neutron, Carbon } from 'blocks';
+
+const proton = new Proton();
+const neutron = new Neutron();
+
+console.log(proton.charge); // 1
+console.log(neutron.charge); // 0
+
+const carbon = new Carbon();
+
+console.log(carbon.charge); // 0
+
+carbon.addHardon(new Proton());
+console.log(carbon.charge); // 1
 ```
 
 ## Anti matter
