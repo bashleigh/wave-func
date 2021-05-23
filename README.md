@@ -43,6 +43,8 @@ AntiMuonNeutrino | 0 | 1/2 | true
 
 ## Bosons
 
+'Communication' or 'transfer' particles that interact with applied forced
+
 name | Forces | Scalar
 --- | --- | ---
 Photon | Electromagnetic | false
@@ -81,7 +83,7 @@ import { Oxygen } from 'blocks';
 
 const oxygen = new Oxygen();
 
-console.log(oxygen.symbol, oxygen.hardons, oxygen.electrons, oxygen.meltingPoint, oxygen.boilingPoint)
+console.log(oxygen.symbol, oxygen.hardons, oxygen.electrons, oxygen.electronShells, oxygen.meltingPoint, oxygen.boilingPoint)
 
 ```
 

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "description": "A strictly typed order of all the things that make up our reality as we know it. ⚛️ ",
   "keywords": [
     "elements",
     "quarks",
