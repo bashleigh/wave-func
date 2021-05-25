@@ -57,7 +57,7 @@ NegativeWBoson | Weak force | false
 Higgs Boson | | true
 
 ```ts
-import { Photon, UpQuark } from 'blocks';
+import { Photon, UpQuark } from 'wave-func';
 
 const photon = new Photo();
 
@@ -81,7 +81,7 @@ The spin of a particle
 The atoms of our reality
 
 ```ts
-import { Oxygen } from 'blocks';
+import { Oxygen } from 'wave-func';
 
 const oxygen = new Oxygen();
 
@@ -92,7 +92,7 @@ console.log(oxygen.symbol, oxygen.hardons, oxygen.electrons, oxygen.electronShel
 ## Charge 
 
 ```ts
-import { Proton, Neutron, Carbon } from 'blocks';
+import { Proton, Neutron, Carbon } from 'wave-func';
 
 const proton = new Proton();
 const neutron = new Neutron();
@@ -111,7 +111,7 @@ console.log(carbon.charge); // 1
 ## Anti matter
 
 ```ts
-import { Proton, Electron, oppositeMatter } from 'blocks';
+import { Proton, Electron, oppositeMatter } from 'wave-func';
 
 const antiMatter = oppositeMatter(new Proton()); // AntiProton
 const antiMatter = oppositeMatter(new Electron()); // Positron
@@ -120,7 +120,7 @@ const antiMatter = oppositeMatter(new Electron()); // Positron
 # Idea
 
 ```ts
-import { Oxygen, Neutron, Proton } from 'blocks';
+import { Oxygen, Neutron, Proton } from 'wave-func';
 
 const element = new Oxygen();
 
