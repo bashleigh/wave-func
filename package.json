@@ -35,6 +35,7 @@
     "coverageDirectory": "../coverage"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc -p ."
   }
 }
