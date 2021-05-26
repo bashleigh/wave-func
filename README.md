@@ -18,13 +18,13 @@ BottomQuark | -1/3 | 1/2 | false
 StrangeQuark | -1/3 | 1/2 | false
 CharmQuark | +2/3 | 1/2 | false
 CharmQuark | +2/3 | 1/2 | false
-AntiUpQuark | -2/3 | 1/2 | false
-AntiDownQuark | +1/3 | 1/2 | false
-AntiTopQuark | -2/3 | 1/2 | false
-AntiBottomQuark | +1/3 | 1/2 | false
-AntiStrangeQuark | +1/3 | 1/2 | false
-AntiCharmQuark | -2/3 | 1/2 | false
-AntiCharmQuark | -2/3 | 1/2 | false
+AntiUpQuark | -2/3 | 1/2 | true
+AntiDownQuark | +1/3 | 1/2 | true
+AntiTopQuark | -2/3 | 1/2 | true
+AntiBottomQuark | +1/3 | 1/2 | true
+AntiStrangeQuark | +1/3 | 1/2 | true
+AntiCharmQuark | -2/3 | 1/2 | true
+AntiCharmQuark | -2/3 | 1/2 | true
 
 ### Leptons
 
