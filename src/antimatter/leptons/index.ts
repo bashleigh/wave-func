@@ -1,7 +1,7 @@
 import { ForceType, Particle, ParticleGroup, ParticleType, StateType } from "../../types";
 
 export class Positron implements Particle {
-  name: 'positron';
+  name = 'positron';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
   charge = {
@@ -20,7 +20,7 @@ export class Positron implements Particle {
 }
 
 export class ElectronAntiNeutrino implements Particle {
-  name: 'electron antineutrino';
+  name = 'electron antineutrino';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
   charge = {
@@ -39,7 +39,7 @@ export class ElectronAntiNeutrino implements Particle {
 }
 
 export class AntiMuon implements Particle {
-  name: 'antimuon';
+  name = 'antimuon';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
   charge = {
@@ -58,7 +58,7 @@ export class AntiMuon implements Particle {
 }
 
 export class MuonAntiNeutrino implements Particle {
-  name: 'muon antineutrino';
+  name = 'muon antineutrino';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
   charge = {
@@ -77,7 +77,7 @@ export class MuonAntiNeutrino implements Particle {
 }
 
 export class AntiTau implements Particle {
-  name: 'antitau';
+  name = 'antitau';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
   charge = {
@@ -96,7 +96,7 @@ export class AntiTau implements Particle {
 }
 
 export class TauAntiNeutrino implements Particle {
-  name: 'tau antineutrino';
+  name = 'tau antineutrino';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
   charge = {
