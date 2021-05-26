@@ -1,6 +1,6 @@
-import { ForceType, Particle, ParticleCharge, ParticleGroup, ParticleType, StateType } from "../../types";
+import { ForceType, AbstractParticle, ParticleCharge, ParticleGroup, ParticleType, StateType } from "../../types";
 
-export class UpQuark implements Particle {
+export class UpQuark extends AbstractParticle {
   name = 'up quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
@@ -20,7 +20,7 @@ export class UpQuark implements Particle {
   spin = '1/2';
 }
 
-export class DownQuark implements Particle {
+export class DownQuark extends AbstractParticle {
   name = 'down quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
@@ -40,7 +40,7 @@ export class DownQuark implements Particle {
   spin = '1/2';
 }
 
-export class CharmQuark implements Particle {
+export class CharmQuark extends AbstractParticle {
   name = 'charm quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
@@ -60,7 +60,7 @@ export class CharmQuark implements Particle {
   spin = '1/2';
 }
 
-export class StrangeQuark implements Particle {
+export class StrangeQuark extends AbstractParticle {
   name = 'strange quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
@@ -80,7 +80,7 @@ export class StrangeQuark implements Particle {
   spin = '1/2';
 }
 
-export class TopQuark implements Particle {
+export class TopQuark extends AbstractParticle {
   name = 'top quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
@@ -100,7 +100,7 @@ export class TopQuark implements Particle {
   spin = '1/2';
 }
 
-export class BottomQuark implements Particle {
+export class BottomQuark extends AbstractParticle {
   name = 'bottom quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;

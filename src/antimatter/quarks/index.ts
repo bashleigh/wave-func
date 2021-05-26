@@ -1,6 +1,6 @@
-import { ForceType, Particle, ParticleCharge, ParticleGroup, ParticleType, StateType } from "../../types";
+import { ForceType, AbstractParticle, ParticleCharge, ParticleGroup, ParticleType, StateType } from "../../types";
 
-export class AntiUpQuark implements Particle {
+export class AntiUpQuark extends AbstractParticle {
   name = 'antiup quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
@@ -20,7 +20,7 @@ export class AntiUpQuark implements Particle {
   spin = '1/2';
 }
 
-export class AntiDownQuark implements Particle {
+export class AntiDownQuark extends AbstractParticle {
   name = 'antidown quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
@@ -40,7 +40,7 @@ export class AntiDownQuark implements Particle {
   spin = '1/2';
 }
 
-export class AntiCharmQuark implements Particle {
+export class AntiCharmQuark extends AbstractParticle {
   name = 'anticharm quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
@@ -60,7 +60,7 @@ export class AntiCharmQuark implements Particle {
   spin = '1/2';
 }
 
-export class AntiStrangeQuark implements Particle {
+export class AntiStrangeQuark extends AbstractParticle {
   name = 'antistrange quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
@@ -81,7 +81,7 @@ export class AntiStrangeQuark implements Particle {
 }
 
 
-export class AntiTopQuark implements Particle {
+export class AntiTopQuark extends AbstractParticle {
   name = 'antitop quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;
@@ -101,7 +101,7 @@ export class AntiTopQuark implements Particle {
   spin = '1/2';
 }
 
-export class AntiBottomQuark implements Particle {
+export class AntiBottomQuark extends AbstractParticle {
   name = 'antibottom quark';
   group = ParticleGroup.FERMION;
   type = ParticleType.QUARK;

@@ -48,6 +48,27 @@ export interface Particle {
   spin: number | string;
 }
 
+export abstract class AbstractParticle implements Particle {
+  abstract name: string;
+  abstract group: ParticleGroup;
+  abstract type?: ParticleType;
+  abstract appliedForces: ForceType[];
+  abstract charge: {
+    value: ParticleCharge;
+    state?: StateType;
+  };
+  abstract scalar: boolean;
+  abstract antiMatter: boolean;
+  abstract mass: number;
+  abstract theoretical: boolean;
+  abstract symbol: string;
+  abstract spin: number | string;
+
+  get chargeForHumans(): string {
+    return `${this.charge.state}${numberToParticleCharge(this.charge.value)}`;
+  }
+}
+
 export enum StateType { 
   'positive',
   'negative',

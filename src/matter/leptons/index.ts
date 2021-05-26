@@ -1,6 +1,6 @@
-import { ForceType, Particle, ParticleGroup, ParticleType, StateType } from "../../types";
+import { ForceType, AbstractParticle, ParticleGroup, ParticleType, StateType } from "../../types";
 
-export class Electron implements Particle {
+export class Electron extends AbstractParticle {
   name = 'electron';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
@@ -19,7 +19,7 @@ export class Electron implements Particle {
   spin = '1/2';
 }
 
-export class ElectronNeutrino implements Particle {
+export class ElectronNeutrino extends AbstractParticle {
   name = 'electron neutrino';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
@@ -39,7 +39,7 @@ export class ElectronNeutrino implements Particle {
 }
 
 
-export class Muon implements Particle {
+export class Muon extends AbstractParticle {
   name = 'muon';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
@@ -58,7 +58,7 @@ export class Muon implements Particle {
   spin = '1/2';
 }
 
-export class Tau implements Particle {
+export class Tau extends AbstractParticle {
   name = 'tau';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
@@ -77,7 +77,7 @@ export class Tau implements Particle {
   spin = '1/2';
 }
 
-export class TauNeutrino implements Particle {
+export class TauNeutrino extends AbstractParticle {
   name = 'tau neutrino';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
@@ -96,7 +96,7 @@ export class TauNeutrino implements Particle {
   spin = '1/2';
 }
 
-export class MuonNeutrino implements Particle {
+export class MuonNeutrino extends AbstractParticle {
   name = 'muon neutrino';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
