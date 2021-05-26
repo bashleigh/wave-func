@@ -1,5 +1,6 @@
 import { Photon } from "../bosons";
 import { getBosons, toSub, toSuper } from "../helpers";
+import { numberToParticleChargeForHumans } from "../helpers/human.readables";
 import { Electron } from "../matter";
 
 describe("Helpers", () => {
@@ -18,5 +19,13 @@ describe("Helpers", () => {
 
     expect(bosons.length).toBe(1);
     expect(bosons[0]).toBeInstanceOf(Photon);
+  });
+
+  it('numberToParticleChargeForHumans', () => {
+    expect(numberToParticleChargeForHumans(0.3333333)).toBe('1/3');
+    expect(numberToParticleChargeForHumans(0.6666666)).toBe('2/3');
+    expect(numberToParticleChargeForHumans(0.5)).toBe('1/2');
+    expect(numberToParticleChargeForHumans(0)).toBe('0');
+    expect(numberToParticleChargeForHumans(1)).toBe('1');
   });
 });

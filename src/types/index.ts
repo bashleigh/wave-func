@@ -1,3 +1,5 @@
+import { numberToParticleChargeForHumans } from "../helpers/human.readables";
+
 export enum ParticleGroup {
   FERMION = 'fermion',
   GAUGE_BOSON = 'gauge boson',
@@ -28,8 +30,6 @@ export enum ParticleCharge {
   '2/3' = 0.6666666,
   '1/2' = .5,
 }
-
-export const numberToParticleCharge = (num: number): ParticleCharge => num === 1 ? ParticleCharge.whole : num === 0.3333333 ? ParticleCharge["1/3"] : num === 0.6666666 ? ParticleCharge["2/3"] : num === .5 ? ParticleCharge["1/2"] : ParticleCharge.none;
 
 export interface Particle {
   name: string;
@@ -65,13 +65,13 @@ export abstract class AbstractParticle implements Particle {
   abstract spin: number | string;
 
   get chargeForHumans(): string {
-    return `${this.charge.state}${numberToParticleCharge(this.charge.value)}`;
+    return `${typeof this.charge.state !== 'undefined' ? this.charge.state === StateType.POSITIVE ? '+' : '-' : ''}${numberToParticleChargeForHumans(this.charge.value)}`;
   }
 }
 
 export enum StateType { 
-  'positive',
-  'negative',
+  POSITIVE = 'positive',
+  NEGATIVE = 'negative',
 }
 
 export enum HardonCategory {
@@ -92,13 +92,13 @@ export abstract class AbstractHardon implements HardonInterface {
   abstract category: HardonCategory; // Determined by particles in hardon?
   abstract antiMatter: boolean;
 
-  get chargeForHumans(): ParticleCharge {
-    return numberToParticleCharge(this.charge);
+  get chargeForHumans(): string {
+    return numberToParticleChargeForHumans(this.charge);
   }
 
   get charge(): number {
     return Math.ceil(this.particles.reduce((current, particle) => {
-      const particleCharge: number = particle.charge.state === StateType.positive ? 0 + particle.charge.value : 0 - particle.charge.value;
+      const particleCharge: number = particle.charge.state === StateType.POSITIVE ? 0 + particle.charge.value : 0 - particle.charge.value;
 
       return current + particleCharge;
     }, 0))

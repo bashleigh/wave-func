@@ -56,7 +56,7 @@ export class PositiveWBoson implements Particle {
   group = ParticleGroup.GAUGE_BOSON;
   charge = {
     value: 1,
-    state: StateType.positive,
+    state: StateType.POSITIVE,
   };
   scalar = false;
   appliedForces = [
@@ -74,7 +74,7 @@ export class NegativeWBoson implements Particle {
   group = ParticleGroup.GAUGE_BOSON;
   charge = {
     value: 1,
-    state: StateType.negative,
+    state: StateType.NEGATIVE,
   };
   scalar = false;
   appliedForces = [

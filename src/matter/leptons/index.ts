@@ -6,7 +6,7 @@ export class Electron extends AbstractParticle {
   group = ParticleGroup.FERMION;
   charge = {
     value: 1,
-    state: StateType.negative,
+    state: StateType.NEGATIVE,
   };
   scalar = false;
   appliedForces = [
@@ -25,7 +25,7 @@ export class ElectronNeutrino extends AbstractParticle {
   group = ParticleGroup.FERMION;
   charge = {
     value: 0,
-    state: StateType.negative,
+    state: StateType.NEGATIVE,
   };
   scalar = false;
   appliedForces = [
@@ -45,7 +45,7 @@ export class Muon extends AbstractParticle {
   group = ParticleGroup.FERMION;
   charge = {
     value: 1,
-    state: StateType.negative,
+    state: StateType.NEGATIVE,
   };
   scalar = false;
   appliedForces = [
@@ -64,7 +64,7 @@ export class Tau extends AbstractParticle {
   group = ParticleGroup.FERMION;
   charge = {
     value: 1,
-    state: StateType.negative,
+    state: StateType.NEGATIVE,
   };
   scalar = false;
   appliedForces = [
@@ -83,7 +83,7 @@ export class TauNeutrino extends AbstractParticle {
   group = ParticleGroup.FERMION;
   charge = {
     value: 1,
-    state: StateType.negative,
+    state: StateType.NEGATIVE,
   };
   scalar = false;
   appliedForces = [
@@ -102,7 +102,7 @@ export class MuonNeutrino extends AbstractParticle {
   group = ParticleGroup.FERMION;
   charge = {
     value: 0,
-    state: StateType.negative,
+    state: StateType.NEGATIVE,
   };
   scalar = false;
   appliedForces = [

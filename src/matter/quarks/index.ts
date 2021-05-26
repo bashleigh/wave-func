@@ -6,7 +6,7 @@ export class UpQuark extends AbstractParticle {
   type = ParticleType.QUARK;
   charge = {
     value: ParticleCharge["2/3"],
-    state: StateType.positive,
+    state: StateType.POSITIVE,
   };
   scalar = false;
   appliedForces = [
@@ -26,7 +26,7 @@ export class DownQuark extends AbstractParticle {
   type = ParticleType.QUARK;
   charge = {
     value: ParticleCharge["1/3"],
-    state: StateType.negative,
+    state: StateType.NEGATIVE,
   };
   scalar = false;
   appliedForces = [
@@ -46,7 +46,7 @@ export class CharmQuark extends AbstractParticle {
   type = ParticleType.QUARK;
   charge = {
     value: ParticleCharge["2/3"],
-    state: StateType.positive,
+    state: StateType.POSITIVE,
   };
   scalar = false;
   appliedForces = [
@@ -66,7 +66,7 @@ export class StrangeQuark extends AbstractParticle {
   type = ParticleType.QUARK;
   charge = {
     value: ParticleCharge["1/3"],
-    state: StateType.negative,
+    state: StateType.NEGATIVE,
   };
   scalar = false;
   appliedForces = [
@@ -86,7 +86,7 @@ export class TopQuark extends AbstractParticle {
   type = ParticleType.QUARK;
   charge = {
     value: ParticleCharge["2/3"],
-    state: StateType.positive,
+    state: StateType.POSITIVE,
   };
   scalar = false;
   appliedForces = [
@@ -106,7 +106,7 @@ export class BottomQuark extends AbstractParticle {
   type = ParticleType.QUARK;
   charge = {
     value: ParticleCharge["1/3"],
-    state: StateType.negative,
+    state: StateType.NEGATIVE,
   };
   scalar = false;
   appliedForces = [
