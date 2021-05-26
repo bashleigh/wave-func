@@ -20,7 +20,7 @@ particle.group | The group of the particle | `fermion`
 particle.type | The type (subtype) of the particle | `lepton`
 particle.appliedForces | An array of forces the particle interacts with | `[ForceType.ELECTROMAGNETISM]`
 particle.charge | An object of the particles charge with positive/negative values | `{value: 0.333333, state: 'negative'}`
-particle.chargeForHumans | The charge value for humans | `1` `-1`
+particle.chargeForHumans | The charge value for humans | `+2/3` `-1/3`
 particle.scalar | A boolean as to whether the particle is scalar | `false`
 particle.antiMatter | A boolean as to whether the particle is considered antimatter | `false`
 particle.mass | The overall mass of the particle in gmev | `.511`
