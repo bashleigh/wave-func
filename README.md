@@ -68,9 +68,9 @@ const bosons = getBosons(up); // [Gluon, PositiveWBoson, NegativeWBoson, ZBoson]
 
 ## Forces 
 
-Electromagnetic
-Weak force
-Strong force (chromodynamic)
+- Electromagnetic
+- Weak force
+- Strong force (chromodynamic)
 
 ## Spin
 
@@ -88,6 +88,48 @@ const oxygen = new Oxygen();
 console.log(oxygen.symbol, oxygen.hardons, oxygen.electrons, oxygen.electronShells, oxygen.meltingPoint, oxygen.boilingPoint)
 
 ```
+
+### Properties
+
+Property | Purpose | Example value
+--- | --- | ---
+element.electrons | The amount of electrons charged to atom. In shells | `[2, 8, 8, 2]`
+element.electronShells | The number of electron shells on an atm | `4`
+element.name | The name of the element from `ElementName` enum | `Calcium`
+element.number | The atomic number of the element (number of protons considered neutral) | `20`
+element.atomicSymbol | The symbol given to the atomic structure | `Ca`
+element.symbol | The atomic symbol and the sub of the element's proton count if required | `21Ca`
+element.group | The atomic group of the element | `Alkalin metals`
+element.meltingPoint | The melting point of the element in kelvin | `1115`
+element.boilingPoint | The boiling point of the element in kelvin | `1757`
+element.hardons | An array of hardon particles in the nucleus | `[[Function Proton], [Function Neutron]]` (not a helpful example)
+element.charge | The overall charge of the element (sum of proton charge, neutron charge and electron charge) | `0` `1`
+element.overallChargeStatus | The overall charge of the element: positive or negative | `negative`
+element.stable | A boolean of the overall atom's charge | `true`
+
+
+### Functions
+
+#### addHardon
+
+Adds a hardon particle to the nucleus which will change the overall atom's charge, stability and symbol output.
+
+```ts
+const element = new Oxygen();
+
+console.log(element.symbol); // O
+console.log(element.charge); // 0
+console.log(element.stable); // true
+
+element.addHardon(new Proton());
+
+console.log(element.symbol); // 9O
+console.log(element.charge); // 1
+console.log(element.stable); // false
+```
+
+> Eventually I want to be able to change the element's atomic name and prototype based on the overall protons/neutrons in the hardon array (nucleus)
+
 
 ## Charge 
 
