@@ -1,6 +1,6 @@
 {
   "name": "wave-func",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/index.js",
   "license": "MIT",
   "description": "A strictly typed order of all the things that make up our reality as we know it. ⚛️ Ψ",
@@ -38,6 +38,6 @@
     "test": "jest",
     "build": "rm -rf ./dist && tsc && npm run build:index",
     "build:index": "rm -rf ./index.js ./index.d.ts && tsc -d --skipLibCheck ./index.ts",
-    "prepublish": "npm run format && npm run build"
+    "prepublish": "npm run build"
   }
 }
