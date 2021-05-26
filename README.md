@@ -4,12 +4,30 @@ A TypeScript based relation to the fundimental building blocks of our reality.
 
 I found it difficult to learn the different and difference between the fundimental particles. So I've built a strictly typed package of all of them and how they relate to each other. This is mainly because of the similarly named particles and the same suffix used for all the different types.
 
+## Fundimental Particles
 
-## Fermions
+### Properties
+Property | Purpose | Example value
+--- | --- | ---
+particle.name | The name of the particle | `electron`
+particle.group | The group of the particle | `fermion`
+particle.type | The type (subtype) of the particle | `lepton`
+particle.appliedForces | An array of forces the particle interacts with | `[ForceType.ELECTROMAGNETISM]`
+particle.charge | An object of the particles charge with positive/negative values | `{value: 1, state: 'negative'}`
+particle.scalar | A boolean as to whether the particle is scalar | `false`
+particle.antiMatter | A boolean as to whether the particle is considered antimatter | `false`
+particle.mass | The overall mass of the particle in gmev | `.511`
+particle.theoretical | A boolean whether the particle is proven or theoretical | `false`
+particle.symbol | The particle's symbol | `e`
+particle.spin | The particles spin | `"1/2"`
+
+Below is a list of all different types of fundimental particles and some brief info.
+
+### Fermions
 
 All particles with mass.
 
-### Quarks
+#### Quarks
 
 name | charge | spin | anti matter
 --- | --- | --- | ---
@@ -28,7 +46,7 @@ AntiStrangeQuark | +1/3 | 1/2 | true
 AntiCharmQuark | -2/3 | 1/2 | true
 AntiCharmQuark | -2/3 | 1/2 | true
 
-### Leptons
+#### Leptons
 
 name | charge | spin | anti matter
 --- | --- | --- | ---
@@ -45,7 +63,7 @@ AntiTauNeutrino | 0 | 1/2 | true
 MuonNeutrino | 0 | 1/2 | false
 AntiMuonNeutrino | 0 | 1/2 | true
 
-## Bosons
+#### Bosons
 
 'Communication' or 'transfer' particles that interact with applied forced or fermions
 
