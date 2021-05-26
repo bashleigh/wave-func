@@ -52,6 +52,7 @@ export abstract class AbstractParticle implements Particle {
   abstract name: string;
   abstract group: ParticleGroup;
   abstract appliedForces: ForceType[];
+  type?: ParticleType;
   abstract charge: {
     value: ParticleCharge;
     state?: StateType;
