@@ -42,7 +42,7 @@ export class AntiProton extends AbstractHardon {
     new AntiDownQuark(),
   ];
   category = HardonCategory.BARYON;
-  antiMatter: true;
+  antiMatter = true;
 }
 
 export class AntiNeutron extends AbstractHardon {
@@ -53,5 +53,5 @@ export class AntiNeutron extends AbstractHardon {
     new AntiDownQuark(),
   ];
   category = HardonCategory.BARYON;
-  antiMatter: true;
+  antiMatter = true;
 }

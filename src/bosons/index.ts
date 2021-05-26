@@ -13,7 +13,7 @@ export class Photon implements Particle {
   antiMatter = false;
   theoretical = false;
   mass = 0;
-  symbol: 'Y';
+  symbol = 'Y';
   spin = '1';
 }
 
@@ -30,7 +30,7 @@ export class Gluon implements Particle {
   antiMatter = false;
   theoretical = false;
   mass = 0;
-  symbol: 'g';
+  symbol = 'g';
   spin = '1';
 }
 
@@ -47,7 +47,7 @@ export class ZBoson implements Particle {
   antiMatter = false;
   theoretical = false;
   mass = 91.19;
-  symbol: 'Z';
+  symbol = 'Z';
   spin = '1';
 }
 
@@ -65,7 +65,7 @@ export class PositiveWBoson implements Particle {
   antiMatter = false;
   theoretical = false;
   mass = 80.39;
-  symbol: 'W+';
+  symbol = 'W+';
   spin = '1';
 }
 
@@ -83,7 +83,7 @@ export class NegativeWBoson implements Particle {
   antiMatter = false;
   theoretical = false;
   mass = 80.39;
-  symbol: 'W-';
+  symbol = 'W-';
   spin = '1';
 }
 
@@ -98,6 +98,6 @@ export class Higgs implements Particle {
   antiMatter = false;
   theoretical = false;
   mass = 124.97;
-  symbol: 'H';
+  symbol = 'H';
   spin = 0;
 }

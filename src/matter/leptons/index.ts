@@ -20,7 +20,7 @@ export class Electron implements Particle {
 }
 
 export class ElectronNeutrino implements Particle {
-  name: 'electron neutrino';
+  name = 'electron neutrino';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
   charge = {
@@ -40,7 +40,7 @@ export class ElectronNeutrino implements Particle {
 
 
 export class Muon implements Particle {
-  name: 'muon';
+  name = 'muon';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
   charge = {
@@ -59,7 +59,7 @@ export class Muon implements Particle {
 }
 
 export class Tau implements Particle {
-  name: 'tau';
+  name = 'tau';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
   charge = {
@@ -78,7 +78,7 @@ export class Tau implements Particle {
 }
 
 export class TauNeutrino implements Particle {
-  name: 'tau neutrino';
+  name = 'tau neutrino';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
   charge = {
@@ -97,7 +97,7 @@ export class TauNeutrino implements Particle {
 }
 
 export class MuonNeutrino implements Particle {
-  name: 'muon neutrino';
+  name = 'muon neutrino';
   type = ParticleType.LEPTON;
   group = ParticleGroup.FERMION;
   charge = {
