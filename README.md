@@ -47,14 +47,14 @@ AntiMuonNeutrino | 0 | 1/2 | true
 
 'Communication' or 'transfer' particles that interact with applied forced
 
-name | Forces | Scalar
+name | Forces | Scalar | Spin | Charge
 --- | --- | ---
-Photon | Electromagnetic | false
-Gluon | Strong force | false
-ZBoson | Weak force | false
-PositiveWBoson | Weak force | false
-NegativeWBoson | Weak force | false
-Higgs Boson | | true
+Photon | Electromagnetic | false | 1 | 0
+Gluon | Strong force | false | 1 | 0
+ZBoson | Weak force | false | 1 | 0
+PositiveWBoson | Weak force | false | 1 | 1
+NegativeWBoson | Weak force | false | 1 | -1
+Higgs Boson | | true | 0 | 0
 
 ```ts
 import { Photon, UpQuark } from 'wave-func';
