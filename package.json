@@ -1,6 +1,6 @@
 {
   "name": "wave-func",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "main": "dist/index.js",
   "license": "MIT",
   "description": "A strictly typed order of all the things that make up our reality as we know it. ⚛️ Ψ",
