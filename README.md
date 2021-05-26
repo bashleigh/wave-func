@@ -7,6 +7,8 @@ I found it difficult to learn the different and difference between the fundiment
 
 ## Fermions
 
+All particles with mass.
+
 ### Quarks
 
 name | charge | spin | anti matter
@@ -45,10 +47,10 @@ AntiMuonNeutrino | 0 | 1/2 | true
 
 ## Bosons
 
-'Communication' or 'transfer' particles that interact with applied forced
+'Communication' or 'transfer' particles that interact with applied forced or fermions
 
 name | Forces | Scalar | Spin | Charge
---- | --- | ---
+--- | --- | --- | --- | ---
 Photon | Electromagnetic | false | 1 | 0
 Gluon | Strong force | false | 1 | 0
 ZBoson | Weak force | false | 1 | 0
