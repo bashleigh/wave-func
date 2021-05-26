@@ -51,7 +51,6 @@ export interface Particle {
 export abstract class AbstractParticle implements Particle {
   abstract name: string;
   abstract group: ParticleGroup;
-  abstract type?: ParticleType;
   abstract appliedForces: ForceType[];
   abstract charge: {
     value: ParticleCharge;

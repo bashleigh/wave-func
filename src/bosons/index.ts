@@ -1,6 +1,6 @@
-import { ForceType, Particle, ParticleGroup, StateType } from "../types";
+import { ForceType, AbstractParticle, ParticleGroup, StateType } from "../types";
 
-export class Photon implements Particle {
+export class Photon extends AbstractParticle {
   name = 'photon';
   group = ParticleGroup.GAUGE_BOSON;
   charge = {
@@ -17,7 +17,7 @@ export class Photon implements Particle {
   spin = '1';
 }
 
-export class Gluon implements Particle {
+export class Gluon extends AbstractParticle {
   name = 'gluon';
   group = ParticleGroup.GAUGE_BOSON;
   charge = {
@@ -34,7 +34,7 @@ export class Gluon implements Particle {
   spin = '1';
 }
 
-export class ZBoson implements Particle {
+export class ZBoson extends AbstractParticle {
   name = 'Z boson';
   group = ParticleGroup.GAUGE_BOSON;
   charge = {
@@ -51,7 +51,7 @@ export class ZBoson implements Particle {
   spin = '1';
 }
 
-export class PositiveWBoson implements Particle {
+export class PositiveWBoson extends AbstractParticle {
   name = 'W+ boson';
   group = ParticleGroup.GAUGE_BOSON;
   charge = {
@@ -69,7 +69,7 @@ export class PositiveWBoson implements Particle {
   spin = '1';
 }
 
-export class NegativeWBoson implements Particle {
+export class NegativeWBoson extends AbstractParticle {
   name = 'W- boson';
   group = ParticleGroup.GAUGE_BOSON;
   charge = {
@@ -87,7 +87,7 @@ export class NegativeWBoson implements Particle {
   spin = '1';
 }
 
-export class Higgs implements Particle {
+export class Higgs extends AbstractParticle {
   name = 'higgs boson';
   group = ParticleGroup.GAUGE_BOSON;
   charge = {
