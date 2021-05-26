@@ -16,7 +16,7 @@ export class AntiUpQuark implements Particle {
   antiMatter = true;
   theoretical = false;
   mass = 2.2;
-  symbol: '-u';
+  symbol = '-u';
   spin = '1/2';
 }
 
@@ -36,7 +36,7 @@ export class AntiDownQuark implements Particle {
   antiMatter = true;
   theoretical = false;
   mass = 4.7;
-  symbol: '–d';
+  symbol = '–d';
   spin = '1/2';
 }
 
@@ -56,7 +56,7 @@ export class AntiCharmQuark implements Particle {
   antiMatter = true;
   theoretical = false;
   mass = 1.28;
-  symbol: '-c';
+  symbol = '-c';
   spin = '1/2';
 }
 
@@ -76,7 +76,7 @@ export class AntiStrangeQuark implements Particle {
   antiMatter = true;
   theoretical = false;
   mass = 96;
-  symbol: '-s';
+  symbol = '-s';
   spin = '1/2';
 }
 
@@ -97,7 +97,7 @@ export class AntiTopQuark implements Particle {
   antiMatter = true;
   theoretical = false;
   mass = 173.1;
-  symbol: '-t';
+  symbol = '-t';
   spin = '1/2';
 }
 
@@ -117,6 +117,6 @@ export class AntiBottomQuark implements Particle {
   antiMatter = true;
   theoretical = false;
   mass = 4.18;
-  symbol: '-b';
+  symbol = '-b';
   spin = '1/2';
 }
