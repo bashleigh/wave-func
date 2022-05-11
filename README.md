@@ -1,8 +1,8 @@
 # Ψ Func
 
-A TypeScript based relation to the fundimental building blocks of our reality.
+A TypeScript based relation to the fundamental building blocks of our reality.
 
-I found it difficult to learn the different and difference between the fundimental particles. So I've built a strictly typed package of all of them and how they relate to each other. This is mainly because of the similarly named particles and the same suffix used for all the different types.
+I found it difficult to learn the different and difference between the fundamental particles. So I've built a strictly typed package of all of them and how they relate to each other. This is mainly because of the similarly named particles and the same suffix used for all the different types.
 
 ## Install
 
@@ -10,7 +10,7 @@ I found it difficult to learn the different and difference between the fundiment
 $ yarn add wave-func
 ```
 
-## Fundimental Particles
+## Fundamental Particles
 
 ### Properties
 Property | Purpose | Example value
@@ -28,7 +28,7 @@ particle.theoretical | A boolean whether the particle is proven or theoretical |
 particle.symbol | The particle's symbol | `e`
 particle.spin | The particles spin | `"1/2"`
 
-Below is a list of all different types of fundimental particles and some brief info.
+Below is a list of all different types of fundamental particles and some brief info.
 
 ### Fermions
 
